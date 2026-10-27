@@ -289,17 +289,24 @@ Melody
 
 const songList = document.getElementById("song-list");
 const songCount = document.getElementById("song-count");
+const randomButton = document.getElementById("random-song");
+const randomResult = document.getElementById("random-result");
 
-function renderSongs(selectedLanguage = "", searchQuery = "") {
-  const normalizedQuery = searchQuery.trim().toLocaleLowerCase();
-  const filteredSongs = songs.filter((song) => {
+function getFilteredSongs() {
+  const selectedLanguage = document.getElementById("genre-select").value;
+  const normalizedQuery = document.getElementById("song-search").value.trim().toLocaleLowerCase();
+  return songs.filter((song) => {
     const matchesLanguage = !selectedLanguage || song.language === selectedLanguage;
     const searchableText = `${song.name} ${song.artist}`.toLocaleLowerCase();
     return matchesLanguage && searchableText.includes(normalizedQuery);
   });
+}
 
+function renderSongs() {
+  const filteredSongs = getFilteredSongs();
   songList.innerHTML = "";
   songCount.textContent = filteredSongs.length;
+  randomButton.disabled = filteredSongs.length === 0;
 
   filteredSongs.forEach((song) => {
     const li = document.createElement("li");
@@ -358,9 +365,28 @@ function renderSongs(selectedLanguage = "", searchQuery = "") {
 }
 
 function filterSongs() {
-  const selectedLanguage = document.getElementById("genre-select").value;
-  const searchQuery = document.getElementById("song-search").value;
-  renderSongs(selectedLanguage, searchQuery);
+  randomResult.textContent = "";
+  renderSongs();
 }
+
+randomButton.addEventListener("click", () => {
+  const filteredSongs = getFilteredSongs();
+  if (filteredSongs.length === 0) {
+    randomResult.textContent = "目前沒有可選的歌曲";
+    return;
+  }
+
+  const selectedIndex = Math.floor(Math.random() * filteredSongs.length);
+  const selectedSong = filteredSongs[selectedIndex];
+  const previousSelection = songList.querySelector(".is-random");
+  previousSelection?.classList.remove("is-random");
+  previousSelection?.removeAttribute("aria-current");
+
+  const selectedCard = songList.children[selectedIndex];
+  selectedCard.classList.add("is-random");
+  selectedCard.setAttribute("aria-current", "true");
+  randomResult.textContent = `隨機選到：${selectedSong.name}`;
+  selectedCard.scrollIntoView({ behavior: "smooth", block: "center" });
+});
 
 renderSongs();
