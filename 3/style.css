@@ -513,10 +513,14 @@ h1 {
     padding: 22px 16px 18px;
   }
 
-  .topbar,
-  .song-item {
+  .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .song-item {
+    flex-direction: row;
+    align-items: center;
   }
 
   .filter-wrap {
@@ -528,11 +532,22 @@ h1 {
   }
 
   .song-info {
-    width: 100%;
+    width: auto;
+    flex: 1;
+  }
+
+  .song-meta {
+    flex: 1;
+  }
+
+  .song-artist {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .song-genre {
-    align-self: flex-end;
+    flex-shrink: 0;
   }
 
   .marine-life {
