@@ -337,12 +337,6 @@ function renderSongs(selectedLanguage = "", searchQuery = "") {
     name.textContent = song.name;
 
     meta.appendChild(name);
-    if (song.artist) {
-      const artist = document.createElement("span");
-      artist.className = "song-artist";
-      artist.textContent = song.artist;
-      meta.appendChild(artist);
-    }
     info.appendChild(track);
     info.appendChild(meta);
 
