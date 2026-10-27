@@ -30,10 +30,10 @@ body {
   place-items: center;
   font-family: "Microsoft JhengHei", Arial, sans-serif;
   background:
-    radial-gradient(ellipse at 50% 72%, rgba(0, 157, 169, 0.2) 0%, rgba(5, 65, 91, 0.12) 26%, transparent 50%),
-    radial-gradient(circle at 18% 12%, rgba(51, 114, 157, 0.2) 0%, transparent 32%),
-    radial-gradient(circle at 84% 24%, rgba(15, 103, 128, 0.14) 0%, transparent 38%),
-    linear-gradient(180deg, #071626 0%, #04131f 48%, #020d18 100%);
+    radial-gradient(ellipse at 50% 72%, rgba(17, 74, 174, 0.22) 0%, rgba(5, 42, 91, 0.14) 26%, transparent 50%),
+    radial-gradient(circle at 18% 12%, rgba(40, 92, 160, 0.2) 0%, transparent 32%),
+    radial-gradient(circle at 84% 24%, rgba(22, 65, 139, 0.16) 0%, transparent 38%),
+    linear-gradient(180deg, #071326 0%, #041022 48%, #020917 100%);
   color: var(--text);
   overflow-x: hidden;
   overflow-y: auto;
@@ -43,9 +43,9 @@ body {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 50% 68%, rgba(28, 196, 195, 0.12), transparent 36%),
-      radial-gradient(circle at 50% 12%, rgba(163, 209, 231, 0.16), transparent 30%),
-      radial-gradient(circle at 30% 20%, rgba(49, 126, 158, 0.12), transparent 24%);
+      radial-gradient(ellipse at 50% 68%, rgba(42, 110, 211, 0.12), transparent 36%),
+      radial-gradient(circle at 50% 12%, rgba(163, 196, 255, 0.16), transparent 30%),
+      radial-gradient(circle at 30% 20%, rgba(49, 91, 158, 0.12), transparent 24%);
     pointer-events: none;
   }
 
@@ -156,12 +156,12 @@ body {
     bottom: -22%;
     height: 48vh;
     background:
-      radial-gradient(ellipse at 50% 0%, rgba(23, 164, 174, 0.2), transparent 55%),
-      linear-gradient(180deg, rgba(13, 61, 82, 0.22), rgba(5, 29, 48, 0.78) 38%, rgba(2, 13, 24, 0.96) 100%);
+      radial-gradient(ellipse at 50% 0%, rgba(30, 91, 190, 0.2), transparent 55%),
+      linear-gradient(180deg, rgba(13, 39, 82, 0.22), rgba(5, 19, 48, 0.78) 38%, rgba(2, 8, 24, 0.96) 100%);
     border-radius: 50% 50% 0 0 / 42% 42% 0 0;
     box-shadow:
-      inset 0 28px 75px rgba(84, 216, 218, 0.08),
-      0 0 55px rgba(24, 156, 176, 0.12);
+      inset 0 28px 75px rgba(91, 151, 255, 0.08),
+      0 0 55px rgba(34, 91, 190, 0.12);
     pointer-events: none;
   }
 
@@ -173,9 +173,9 @@ body {
     margin: -8px 0 0;
     overflow: hidden;
     background:
-      radial-gradient(ellipse at 50% 46%, rgba(18, 166, 175, 0.2), transparent 52%),
-      radial-gradient(ellipse at 50% 100%, rgba(21, 86, 119, 0.2), transparent 72%),
-      linear-gradient(180deg, transparent 0%, rgba(4, 29, 43, 0.14) 58%, rgba(2, 13, 24, 0.55) 100%);
+      radial-gradient(ellipse at 50% 46%, rgba(25, 99, 183, 0.18), transparent 52%),
+      radial-gradient(ellipse at 50% 100%, rgba(21, 52, 119, 0.22), transparent 72%),
+      linear-gradient(180deg, transparent 0%, rgba(4, 19, 43, 0.14) 58%, rgba(2, 8, 24, 0.55) 100%);
   }
 
   .marine-life::before {
